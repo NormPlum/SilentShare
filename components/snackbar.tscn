@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://tu0lxauxal4j"]
+
+[ext_resource type="Script" uid="uid://drv40d2acue63" path="res://components/snackbar.gd" id="1_s8wu4"]
+[ext_resource type="StyleBox" uid="uid://c3uet4gf45f0i" path="res://resources/popup_stylebox.tres" id="2_ff63g"]
+
+[node name="Snackbar" type="MarginContainer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 176
+script = ExtResource("1_s8wu4")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_ff63g")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Snackbar"
+text = "The user \"Name\" has been deleted."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"SnackbarButton"
+text = "Undo"
+flat = true
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 6.0
+one_shot = true
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

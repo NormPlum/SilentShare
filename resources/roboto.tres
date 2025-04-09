@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://pbrbnnis2032"]
+
+[ext_resource type="FontFile" uid="uid://cj45p5fwf3ykg" path="res://resources/fonts/Roboto-VariableFont_wdth,wght.ttf" id="1_2fc0i"]
+
+[resource]
+base_font = ExtResource("1_2fc0i")

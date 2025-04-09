@@ -1,0 +1,116 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://c4ffebt8al510"]
+
+[ext_resource type="Texture2D" uid="uid://bhndjc8cd50cs" path="res://resources/icons/check_box_fill.png" id="1_q0gy7"]
+[ext_resource type="FontVariation" uid="uid://pbrbnnis2032" path="res://resources/roboto.tres" id="1_vobhj"]
+[ext_resource type="Texture2D" uid="uid://d27wo6qg34ntx" path="res://resources/icons/check_box_blank.png" id="2_seiuk"]
+[ext_resource type="StyleBox" uid="uid://c3uet4gf45f0i" path="res://resources/popup_stylebox.tres" id="3_saus6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju2qy"]
+content_margin_left = 32.0
+content_margin_top = 16.0
+content_margin_right = 32.0
+content_margin_bottom = 16.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.596078, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58e2t"]
+content_margin_left = 32.0
+content_margin_top = 16.0
+content_margin_right = 32.0
+content_margin_bottom = 16.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3hjh"]
+content_margin_left = 24.0
+content_margin_top = 8.0
+content_margin_right = 24.0
+content_margin_bottom = 8.0
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jjxv"]
+content_margin_left = 24.0
+content_margin_top = 8.0
+content_margin_right = 24.0
+content_margin_bottom = 8.0
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_263hp"]
+content_margin_left = 24.0
+content_margin_top = 8.0
+content_margin_right = 24.0
+content_margin_bottom = 8.0
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seiuk"]
+bg_color = Color(0.376471, 0.490196, 0.545098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3buxq"]
+bg_color = Color(0.376471, 0.490196, 0.545098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4764"]
+bg_color = Color(0.376471, 0.490196, 0.545098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_saus6"]
+draw_center = false
+border_width_right = 4
+border_color = Color(1, 1, 1, 0)
+
+[resource]
+default_font = ExtResource("1_vobhj")
+AppBarHeadline/base_type = &"Label"
+AppBarHeadline/colors/font_color = Color(1, 1, 1, 1)
+AppBarHeadline/font_sizes/font_size = 48
+CheckBox/constants/icon_max_width = 48
+CheckBox/icons/checked = ExtResource("1_q0gy7")
+CheckBox/icons/unchecked = ExtResource("2_seiuk")
+Label/colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+LineEdit/colors/caret_color = Color(0.129412, 0.129412, 0.129412, 1)
+LineEdit/colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+LineEdit/colors/font_placeholder_color = Color(0.458824, 0.458824, 0.458824, 1)
+LineEdit/font_sizes/font_size = 32
+LineEdit/styles/focus = SubResource("StyleBoxFlat_ju2qy")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_58e2t")
+ListItemLabel/base_type = &"Label"
+ListItemLabel/font_sizes/font_size = 36
+ListItemSupportingText/base_type = &"Label"
+ListItemSupportingText/colors/font_color = Color(0.458824, 0.458824, 0.458824, 1)
+ListItemSupportingText/font_sizes/font_size = 24
+MenuItem/base_type = &"Button"
+MenuItem/colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+MenuItem/colors/font_hover_color = Color(0.129412, 0.129412, 0.129412, 1)
+MenuItem/colors/font_pressed_color = Color(0.129412, 0.129412, 0.129412, 1)
+MenuItem/font_sizes/font_size = 36
+MenuItem/styles/hover = SubResource("StyleBoxFlat_j3hjh")
+MenuItem/styles/normal = SubResource("StyleBoxFlat_4jjxv")
+MenuItem/styles/pressed = SubResource("StyleBoxFlat_263hp")
+Snackbar/base_type = &"Label"
+Snackbar/colors/font_color = Color(1, 1, 1, 1)
+Snackbar/font_sizes/font_size = 32
+SnackbarButton/base_type = &"Button"
+SnackbarButton/colors/font_color = Color(1, 0.596078, 0, 1)
+SnackbarButton/colors/font_hover_color = Color(1, 1, 1, 1)
+SnackbarButton/font_sizes/font_size = 32
+TooltipLabel/colors/font_color = Color(1, 1, 1, 1)
+TooltipLabel/font_sizes/font_size = 16
+TooltipPanel/styles/panel = ExtResource("3_saus6")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_seiuk")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_3buxq")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_r4764")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_saus6")

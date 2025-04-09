@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdbxi571mpry6"]
+
+[ext_resource type="Script" uid="uid://c2086ss4s8ij8" path="res://view_items.gd" id="1_i5rkt"]
+[ext_resource type="PackedScene" uid="uid://do1e571ovud6l" path="res://components/app_bar.tscn" id="2_b060a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rc54j"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="ViewItems" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rc54j")
+script = ExtResource("1_i5rkt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="AppBar" parent="VBoxContainer" instance=ExtResource("2_b060a")]
+layout_mode = 2
+headline = "Silent Share"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0

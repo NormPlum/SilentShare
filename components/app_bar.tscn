@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://do1e571ovud6l"]
+
+[ext_resource type="Texture2D" uid="uid://b1odmwad85p5a" path="res://resources/icons/account_circle.png" id="1_73boa"]
+[ext_resource type="Script" uid="uid://bcd3w4xc6v28d" path="res://components/app_bar.gd" id="1_jd5mv"]
+[ext_resource type="Texture2D" uid="uid://7jbslvdsuj0o" path="res://resources/icons/account_circle_fill.png" id="1_uuf33"]
+[ext_resource type="Texture2D" uid="uid://cmdknjh4tngbq" path="res://resources/icons/arrow_back.png" id="2_jg0j7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuf33"]
+bg_color = Color(0.376471, 0.490196, 0.545098, 1)
+
+[node name="AppBar" type="PanelContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uuf33")
+script = ExtResource("1_jd5mv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+tooltip_text = "Back"
+texture_normal = ExtResource("2_jg0j7")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"AppBarHeadline"
+text = "Silent Share"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="UserButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Switch user"
+texture_normal = ExtResource("1_73boa")
+texture_hover = ExtResource("1_uuf33")
+ignore_texture_size = true
+stretch_mode = 3
+
+[connection signal="button_down" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_button_touched" binds= ["BackButton", true]]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_button_touched" binds= ["BackButton", false]]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/UserButton" to="." method="_on_button_touched" binds= ["UserButton", true]]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/UserButton" to="." method="_on_button_touched" binds= ["UserButton", false]]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/UserButton" to="." method="_on_user_button_pressed"]

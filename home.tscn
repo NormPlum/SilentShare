@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cc2nw1vub2yn4"]
+
+[ext_resource type="Script" uid="uid://bm7si55bs7cbp" path="res://home.gd" id="1_lxycn"]
+[ext_resource type="PackedScene" uid="uid://do1e571ovud6l" path="res://components/app_bar.tscn" id="1_tt30a"]
+[ext_resource type="PackedScene" uid="uid://i2nikpovkbj5" path="res://components/fab.tscn" id="4_lxycn"]
+[ext_resource type="Texture2D" uid="uid://b50dxdvhshr1b" path="res://resources/icons/edit.png" id="4_w1mvj"]
+[ext_resource type="Texture2D" uid="uid://co3oisfl7cki1" path="res://resources/icons/edit_fill.png" id="5_lxycn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ey7h"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Home" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ey7h")
+script = ExtResource("1_lxycn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="AppBar" parent="VBoxContainer" instance=ExtResource("1_tt30a")]
+unique_name_in_owner = true
+layout_mode = 2
+type = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="FAB" parent="CanvasLayer" instance=ExtResource("4_lxycn")]
+unique_name_in_owner = true
+button_texture_normal = ExtResource("4_w1mvj")
+button_texture_hover = ExtResource("5_lxycn")
+button_tooltip = "Edit items"
+
+[connection signal="button_pressed" from="CanvasLayer/FAB" to="." method="_on_fab_button_pressed"]

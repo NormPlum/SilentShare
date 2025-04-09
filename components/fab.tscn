@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://i2nikpovkbj5"]
+
+[ext_resource type="Script" uid="uid://b5wmprol4iqqs" path="res://components/fab.gd" id="1_tgnp2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ayvv"]
+bg_color = Color(1, 0.596078, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0, 0, 0, 0.196078)
+shadow_size = 3
+shadow_offset = Vector2(0, 2)
+
+[node name="FAB" type="MarginContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -144.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+script = ExtResource("1_tgnp2")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ayvv")
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+stretch_mode = 3
+
+[connection signal="button_down" from="PanelContainer/TextureButton" to="." method="_on_texture_button_touched" binds= [true]]
+[connection signal="button_up" from="PanelContainer/TextureButton" to="." method="_on_texture_button_touched" binds= [false]]
+[connection signal="pressed" from="PanelContainer/TextureButton" to="." method="_on_texture_button_pressed"]

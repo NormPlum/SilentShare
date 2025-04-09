@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://mjuo74ipbah4"]
+
+[ext_resource type="PackedScene" uid="uid://do1e571ovud6l" path="res://components/app_bar.tscn" id="1_672v4"]
+[ext_resource type="Script" uid="uid://crs2lt34dmoax" path="res://edit_items.gd" id="1_bk8wx"]
+[ext_resource type="PackedScene" uid="uid://i2nikpovkbj5" path="res://components/fab.tscn" id="2_bk8wx"]
+[ext_resource type="Texture2D" uid="uid://ckts4iow3kel3" path="res://resources/icons/add.png" id="3_vkm11"]
+[ext_resource type="PackedScene" uid="uid://tu0lxauxal4j" path="res://components/snackbar.tscn" id="5_vkm11"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rc54j"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="EditItems" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rc54j")
+script = ExtResource("1_bk8wx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="AppBar" parent="VBoxContainer" instance=ExtResource("1_672v4")]
+layout_mode = 2
+headline = "Edit items"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Padding" type="Control" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="FAB" parent="CanvasLayer" instance=ExtResource("2_bk8wx")]
+button_texture_normal = ExtResource("3_vkm11")
+button_tooltip = "Add item"
+
+[node name="Snackbar" parent="CanvasLayer" instance=ExtResource("5_vkm11")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="child_entered_tree" from="VBoxContainer/ScrollContainer/VBoxContainer" to="." method="_on_vbox_container_child_entered_tree"]
+[connection signal="button_pressed" from="CanvasLayer/FAB" to="." method="_on_fab_button_pressed"]
+[connection signal="timer_expired" from="CanvasLayer/Snackbar" to="." method="_on_snackbar_timer_expired"]
+[connection signal="undo_pressed" from="CanvasLayer/Snackbar" to="." method="_on_snackbar_undo_pressed"]

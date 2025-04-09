@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck37v0lnt1o82"]
+
+[ext_resource type="Script" uid="uid://ci71yy8fxiryc" path="res://components/view_item.gd" id="1_h1j8s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otscx"]
+draw_center = false
+border_width_bottom = 1
+border_color = Color(1, 0.596078, 0, 1)
+
+[node name="ViewItem" type="PanelContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 98.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_otscx")
+script = ExtResource("1_h1j8s")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+theme_type_variation = &"ListItemSupportingText"
+theme_override_font_sizes/font_size = 32
+text = "Field name"
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 128)
+layout_mode = 2
+theme_type_variation = &"ListItemLabel"
+theme_override_font_sizes/font_size = 96
+text = "Field value"
+vertical_alignment = 1
+autowrap_mode = 2
