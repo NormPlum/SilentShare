@@ -75,17 +75,16 @@ func _notification(what: int) -> void:
 #region Custom Functions
 # Load the current user.
 func load_current_user() -> void:
-    for user in Global.users:
-        if Global.users[user].current:
-            # Set the app bar headline.
-            %AppBar.headline = user
+    var user := Global.get_current_user()
 
-            # Load the fields.
-            for item in Global.users[user].fields:
-                var item_node = preload("res://components/item_view.tscn").instantiate()
-                item_node.item_name = item
-                item_node.item_value = Global.users[user].fields[item]
-                item_node.connect("checkbox_toggled", _on_item_checkbox_toggled)
-                %VBoxContainer.add_child(item_node)
-            return
+    # Set the app bar headline.
+    %AppBar.headline = user
+
+    # Load the fields.
+    for item in Global.users[user].fields:
+        var item_node = preload("res://components/item_view.tscn").instantiate()
+        item_node.item_name = item
+        item_node.item_value = Global.users[user].fields[item]
+        item_node.connect("checkbox_toggled", _on_item_checkbox_toggled)
+        %VBoxContainer.add_child(item_node)
 #endregion

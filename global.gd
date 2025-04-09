@@ -66,7 +66,10 @@ func get_current_user() -> String:
         if users[user].current:
             return user
 
-    return ""
+    # If no user is set as 'current', return the first user.
+    var user = users.keys()[0]
+    users[user].current = true
+    return user
 
 
 # Set user as current.

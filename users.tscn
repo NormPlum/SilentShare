@@ -56,7 +56,7 @@ unique_name_in_owner = true
 visible = false
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
-[connection signal="child_entered_tree" from="VBoxContainer/ScrollContainer/VBoxContainer" to="." method="_on_v_box_container_child_entered_tree"]
+[connection signal="child_entered_tree" from="VBoxContainer/ScrollContainer/VBoxContainer" to="." method="_on_vbox_container_child_entered_tree"]
 [connection signal="button_pressed" from="CanvasLayer/FAB" to="." method="_on_fab_button_pressed"]
 [connection signal="timer_expired" from="CanvasLayer/Snackbar" to="." method="_on_snackbar_timer_expired"]
 [connection signal="undo_pressed" from="CanvasLayer/Snackbar" to="." method="_on_snackbar_undo_pressed"]

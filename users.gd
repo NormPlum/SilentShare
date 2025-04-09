@@ -60,7 +60,7 @@ func _on_snackbar_timer_expired() -> void:
 
 
 # A child node was added to the VBoxContainer.
-func _on_v_box_container_child_entered_tree(_node: Node) -> void:
+func _on_vbox_container_child_entered_tree(_node: Node) -> void:
     # Move the Padding node to the bottom.
     %Padding.move_to_front.call_deferred()
 
