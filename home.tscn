@@ -39,6 +39,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
+[node name="Padding" type="Control" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 
@@ -48,4 +53,5 @@ button_texture_normal = ExtResource("4_w1mvj")
 button_texture_hover = ExtResource("5_lxycn")
 button_tooltip = "Edit items"
 
+[connection signal="child_entered_tree" from="VBoxContainer/ScrollContainer/VBoxContainer" to="." method="_on_vbox_container_child_entered_tree"]
 [connection signal="button_pressed" from="CanvasLayer/FAB" to="." method="_on_fab_button_pressed"]

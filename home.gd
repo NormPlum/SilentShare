@@ -69,6 +69,12 @@ func _on_fab_button_pressed() -> void:
 func _notification(what: int) -> void:
     if what == NOTIFICATION_WM_GO_BACK_REQUEST:
         get_tree().quit()
+
+
+# A child node was added to the VBoxContainer.
+func _on_vbox_container_child_entered_tree(_node: Node) -> void:
+    # Move the Padding node to the bottom (to avoid the FAB covering the last item).
+    %Padding.move_to_front.call_deferred()
 #endregion
 
 
