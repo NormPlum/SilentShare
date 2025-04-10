@@ -5,6 +5,13 @@ Silent Share is an Android app that lets you share personal information with oth
 For example, if you're standing at a store checkout or reception desk and need to tell someone your personal information (such as your phone number or date-of-birth), anyone standing nearby can overhear it. Instead, you can use Silent Share to visually display the information on your phone in a large, easy-to-read font.
 
 
+### Download
+
+We recommend using [Obtainium](https://obtainium.imranr.dev) to install/update Silent Share.
+
+Alternatively, the APK file can be downloaded directly from the [Releases page](https://codeberg.org/NormPlum/SilentShare/releases/latest).
+
+
 ### How To Use
 
 The main screen shows the default user account ('Me') and some dummy fields ('Name' and 'Phone'). Use the floating Edit button to add, edit and remove fields. Fields can have any name and value you like, and you can add as many fields as you like.
