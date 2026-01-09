@@ -9,16 +9,17 @@ For example, if you're standing at a store checkout or reception desk and need t
 
 <p>
 	<a href="https://obtainium.imranr.dev">
-		<img alt="Get it on Obtainium" src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png" height="60">
+		<img alt="Get it on Obtainium" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/badges/badge-obtainium.png" height="60">
 	</a>
-	<a href="https://codeberg.org/NormPlum/SilentShare/releases/latest">
-		<img alt="Get it on Codeberg" src="https://codeberg.org/Codeberg/GetItOnCodeberg/raw/branch/main/get-it-on-white-on-black.png" height="60">
+	&nbsp;
+	<a href="https://github.com/NormPlum/SilentShare/releases/latest">
+		<img alt="Get it on GitHub" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/badges/badge-github.png" height="60">
 	</a>
 </p>
 
 We recommend using [Obtainium](https://obtainium.imranr.dev) to install/update Silent Share.
 
-Alternatively, the APK file can be downloaded directly from the [Releases page](https://codeberg.org/NormPlum/SilentShare/releases/latest).
+Alternatively, the APK file can be downloaded directly from the [Releases page](https://github.com/NormPlum/SilentShare/releases/latest).
 
 
 ### How To Use
