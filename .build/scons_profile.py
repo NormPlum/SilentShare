@@ -3,7 +3,6 @@ target = "template_release"
 arch = "arm64"
 optimize = "size_extra"
 lto = "full"
-build_profile = "../Silent Share/app/.build/profile.gdbuild"
 
 # Toggles.
 production = "yes"

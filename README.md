@@ -12,20 +12,20 @@ easy-to-read font.
 ### Screenshots
 
 <p>
-	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-main.png">
-		<img alt="Main screen showing three fields for user Norm" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-main.png" height="300">
+	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/1.png">
+		<img alt="Main screen showing three fields for user Norm" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/1.png" height="300">
 	</a>
 	&nbsp;
-	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-view.png">
-		<img alt="View screen showing two fields in a large font" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-view.png" height="300">
+	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/2.png">
+		<img alt="View screen showing two fields in a large font" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/2.png" height="300">
 	</a>
 	&nbsp;
-	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-edit.png">
-		<img alt="Edit screen showing Norm's three fields plus a blank one" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-edit.png" height="300">
+	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/3.png">
+		<img alt="Edit screen showing Norm's three fields plus a blank one" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/3.png" height="300">
 	</a>
 	&nbsp;
-	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-users.png">
-		<img alt="User selection screen showing two users" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/screenshot-users.png" height="300">
+	<a href="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/4.png">
+		<img alt="User selection screen showing two users" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/phoneScreenshots/4.png" height="300">
 	</a>
 </p>
 
@@ -34,11 +34,11 @@ easy-to-read font.
 
 <p>
 	<a href="https://obtainium.imranr.dev">
-		<img alt="Get it on Obtainium" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/badge-obtainium.png" height="60">
+		<img alt="Get it on Obtainium" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/badges/badge-obtainium.png" height="60">
 	</a>
 	&nbsp;
 	<a href="https://github.com/NormPlum/SilentShare/releases/latest">
-		<img alt="Get it on GitHub" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/images/badge-github.png" height="60">
+		<img alt="Get it on GitHub" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/badges/badge-github.png" height="60">
 	</a>
 </p>
 

@@ -1,0 +1,4 @@
+- Fixed not being able to press on checkboxes
+- Optimised APK file to be smaller
+- Updated project to Godot v4.6.1
+- Updated README with screenshots and GitHub links/badges
