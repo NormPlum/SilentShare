@@ -36,7 +36,9 @@ func _on_check_box_toggled(toggled_on: bool) -> void:
 
 # When the item is clicked.
 func _on_gui_input(event: InputEvent) -> void:
-    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-        if event.is_released() and get_global_rect().has_point(event.global_position):
+    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
+        # Ignore presses/clicks on the checkbox itself, as they're already covered by _on_check_box_toggled().
+        if get_global_rect().has_point(event.global_position) and \
+                not %CheckBox.get_global_rect().has_point(event.global_position):
             %CheckBox.button_pressed = !%CheckBox.button_pressed
 #endregion
