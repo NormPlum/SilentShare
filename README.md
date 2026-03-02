@@ -1,7 +1,7 @@
 ## Silent Share
 
 Silent Share is an Android app that lets you share personal information with
-others in-person and non-verbally.
+others visually in-person.
 
 For example, if you're standing at a store checkout or reception desk and need
 to tell someone your personal information (such as your phone number or
