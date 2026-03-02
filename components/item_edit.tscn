@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt3dhywmprdb5"]
+[gd_scene format=3 uid="uid://dt3dhywmprdb5"]
 
 [ext_resource type="Texture2D" uid="uid://cu0aclshtcckg" path="res://resources/icons/delete.png" id="1_h5q1e"]
 [ext_resource type="Script" uid="uid://dgxiosqf1bm6p" path="res://components/item_edit.gd" id="1_tyyfu"]
@@ -9,7 +9,7 @@ draw_center = false
 border_width_bottom = 1
 border_color = Color(1, 0.596078, 0, 1)
 
-[node name="ItemEdit" type="PanelContainer"]
+[node name="ItemEdit" type="PanelContainer" unique_id=1054954982]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 98.0
@@ -18,38 +18,38 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_otscx")
 script = ExtResource("1_tyyfu")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1823756597]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=496520278]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=814741999]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="NameEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="NameEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=101403865]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 mouse_filter = 1
 placeholder_text = "Name"
 
-[node name="ValueEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="ValueEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=406138065]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 mouse_filter = 1
 placeholder_text = "Value"
 
-[node name="DeleteButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+[node name="DeleteButton" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=1513286560]
 unique_name_in_owner = true
 self_modulate = Color(0.458824, 0.458824, 0.458824, 1)
 custom_minimum_size = Vector2(64, 0)
