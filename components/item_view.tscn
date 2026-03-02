@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ukkn7luuri4o"]
+[gd_scene format=3 uid="uid://ukkn7luuri4o"]
 
 [ext_resource type="Script" uid="uid://dfog0orh5dyjx" path="res://components/item_view.gd" id="1_c30vd"]
 
@@ -7,7 +7,7 @@ draw_center = false
 border_width_bottom = 1
 border_color = Color(1, 0.596078, 0, 1)
 
-[node name="ItemView" type="PanelContainer"]
+[node name="ItemView" type="PanelContainer" unique_id=233352994]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 98.0
@@ -16,24 +16,24 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_otscx")
 script = ExtResource("1_c30vd")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=59786288]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=804107807]
 layout_mode = 2
 theme_override_constants/separation = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1370067642]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=95805244]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
@@ -43,7 +43,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 uppercase = true
 
-[node name="Value" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Value" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=937652821]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 56)
 layout_mode = 2
@@ -52,7 +52,7 @@ text = "Field value"
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer"]
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer" unique_id=1275078170]
 unique_name_in_owner = true
 self_modulate = Color(0.458824, 0.458824, 0.458824, 1)
 layout_mode = 2
