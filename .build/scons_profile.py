@@ -22,6 +22,7 @@ disable_navigation_3d = "yes"
 disable_xr = "yes"
 engine_update_check = "no"
 generate_android_binaries = "yes"
+swappy = "yes"
 
 # Modules.
 modules_enabled_by_default = "no"
