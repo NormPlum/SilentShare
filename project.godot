@@ -18,6 +18,7 @@ config/name="SilentShare"
 run/main_scene="uid://cc2nw1vub2yn4"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.6", "GL Compatibility")
+run/low_processor_mode=true
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/show_image=false
 config/icon="uid://jy6rbrubw4g8"
