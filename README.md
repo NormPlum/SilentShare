@@ -33,7 +33,7 @@ easy-to-read font.
 ### Download
 
 <p>
-	<a href="https://obtainium.imranr.dev">
+	<a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/NormPlum/SilentShare">
 		<img alt="Get it on Obtainium" src="https://raw.githubusercontent.com/NormPlum/SilentShare/refs/heads/master/metadata/en-US/images/badges/badge-obtainium.png" height="60">
 	</a>
 	&nbsp;
