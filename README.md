@@ -71,4 +71,4 @@ Silent Share has no internet permission, so your information never leaves your
 device. However, your information is stored unencrypted on your device, so do
 not use this app to store sensitive information like passwords.
 
-Silent Share is free and open source, released under the GPLv3 licence.
+Silent Share is free and open source, released under the GPL v3.0 or later (`GPL-3.0-or-later`) licence.
